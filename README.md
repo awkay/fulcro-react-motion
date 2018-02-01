@@ -8,6 +8,8 @@ integrate external NPM dependencies.
 The `package.json` file is where we pull in react-motion. The CLJ
 dependencies are for running shadow-cljs itself in the JVM.
 
+You can see it live at []().
+
 ## Setting Up
 
 The shadow-cljs compiler uses all cljsjs and NPM js dependencies through

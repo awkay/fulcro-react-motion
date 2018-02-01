@@ -1,5 +1,6 @@
-(ns transitions.intro
-  (:require ["react-motion" :refer [Motion spring]]
+(ns transitions.simple-transition-demo
+  (:require ["react-motion" :refer [spring]]
+            [transitions.utils :as u :refer [ui-motion]]
             [devcards.core :refer-macros [mkdn-pprint-source defcard-doc]]
             [fulcro.client.cards :refer [defcard-fulcro]]
             [fulcro-css.css :as css]
@@ -7,17 +8,6 @@
             [fulcro.client.dom :as dom]
             [goog.object :as gobj]
             [fulcro.client.mutations :as m]))
-
-(defn factory-apply
-  "A function for wrapping a js React class in a factory."
-  [class]
-  (fn [props & children]
-    (apply js/React.createElement
-      class
-      props
-      children)))
-
-(def ui-motion (factory-apply Motion))
 
 (defsc Block
   "This is a component so we can show that transitions can easily be
@@ -75,7 +65,7 @@
 
   Instead of placing the CSS on the HTML, we co-located it using Fulcro CSS, and also split the UI into pieces to show how
   data could be passed through the data-driven layers of Fulcro."
-  (mkdn-pprint-source factory-apply)
+  (mkdn-pprint-source u/factory-apply)
   (mkdn-pprint-source ui-motion)
   (mkdn-pprint-source Block)
   (mkdn-pprint-source ui-block)
