@@ -4,8 +4,7 @@
                   :output-dir       "resources/public/js/cards"
                   :asset-path       "/js/cards"
                   :compiler-options {:devcards true}
-                  :modules          {:main
-                                     {:entries [transitions.cards]}}
+                  :modules          {:main {:entries [transitions.cards]}}
                   :devtools         {:after-load transitions.cards/refresh
                                      :preloads   [fulcro.inspect.preload shadow.cljs.devtools.client.hud]
                                      :http-root  "resources/public"
