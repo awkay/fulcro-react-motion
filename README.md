@@ -45,5 +45,5 @@ shadow-cljs - HTTP server for ":cards" available at http://localhost:8023
 The compiler will detect which builds are affected by a change and will minimize
 incremental build time.
 
-The URLs for working with cards is: [http://localhost:8023/cards.html](http://localhost:8023/cards.html)
+The URLs for working with cards is: [http://localhost:8023](http://localhost:8023)
 
