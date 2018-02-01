@@ -102,17 +102,19 @@
   (mkdn-pprint-source Demo)
   (mkdn-pprint-source Root))
 
-(defcard-fulcro slide-demo-no-parent-context
-  "This card demonstrates a version without the `with-parent-context` wrapper. Try playing with toggle and
-  the checkbox. You'll see that things start to malfunction. State transitions don't happen, motion
-  breaks, etc."
-  BadRoot
-  {}
-  {:inspect-data true})
-
 (defcard-fulcro slide-demo
   "This card includes with `with-parent-context` wrapper. This enables the nested content to
   work properly. Any combination of toggles and checkbox changes should be ok now."
   Root
+  {}
+  {:inspect-data true})
+
+(defcard-fulcro slide-demo-no-parent-context
+  "# BROKEN VERSION
+
+  This card demonstrates a version without the `with-parent-context` wrapper. Try playing with toggle and
+  the checkbox. You'll see that things start to malfunction: State transitions don't happen (the checkbox
+  disconnects and becomes an uncontrolled component, so it looks like it is working, but look at app state)."
+  BadRoot
   {}
   {:inspect-data true})
