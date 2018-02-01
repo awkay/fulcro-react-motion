@@ -8,7 +8,7 @@ integrate external NPM dependencies.
 The `package.json` file is where we pull in react-motion. The CLJ
 dependencies are for running shadow-cljs itself in the JVM.
 
-You can see it live at []().
+You can see it live at [https://awkay.github.io/fulcro-react-motion/](https://awkay.github.io/fulcro-react-motion/).
 
 ## Setting Up
 
